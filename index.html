@@ -1,144 +1,285 @@
+<!-- =========================
+INDEX.HTML
+========================= -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PGDekho - Find Best PG & Hostel Near You</title>
-    <meta name="description" content="Book verified PG, Hostel & Paying Guest accommodation near colleges. Safe, affordable & luxury options.">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NV PG & Hostel</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
 </head>
+
 <body>
-    <!-- Header/Navbar -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="#" class="logo">
-                        <img src="https://via.placeholder.com/120x40/FF6B35/FFFFFF?text=PGDekho" alt="PGDekho">
-                    </a>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#properties" class="nav-link">PGs</a></li>
-                    <li><a href="#amenities" class="nav-link">Amenities</a></li>
-                    <li><a href="#cities" class="nav-link">Cities</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="#" class="login-btn">Login</a>
-                    <a href="#" class="book-btn">Book Now</a>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Find Verified PG & Hostel <span>Near Your College</span></h1>
-                <p>10,000+ verified properties | Safe & secure | Starting ₹5,000/month</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <strong>25+</strong>
-                        <span>Cities</span>
-                    </div>
-                    <div class="stat-item">
-                        <strong>10K+</strong>
-                        <span>Properties</span>
-                    </div>
-                    <div class="stat-item">
-                        <strong>50K+</strong>
-                        <span>Happy Students</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-search">
-                <div class="search-tabs">
-                    <button class="tab-btn active" data-tab="pg">PG</button>
-                    <button class="tab-btn" data-tab="hostel">Hostel</button>
-                    <button class="tab-btn" data-tab="flat">Flats</button>
-                </div>
-                <form class="search-form">
-                    <div class="search-group">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" placeholder="Enter City/Area (ex: Koramangala, Delhi)" required>
-                    </div>
-                    <div class="search-group">
-                        <i class="fas fa-bed"></i>
-                        <select>
-                            <option>1 BHK</option>
-                            <option>2 BHK</option>
-                            <option>3 BHK</option>
-                            <option>Single Room</option>
-                        </select>
-                    </div>
-                    <div class="search-group">
-                        <i class="fas fa-rupee-sign"></i>
-                        <select>
-                            <option>₹5,000 - ₹10,000</option>
-                            <option>₹10,000 - ₹15,000</option>
-                            <option>₹15,000+</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="search-btn">
-                        <i class="fas fa-search"></i> Search PGs
-                    </button>
-                </form>
-            </div>
+  <!-- NAVBAR -->
+
+  <header>
+
+    <div class="logo">
+      NV PG
+    </div>
+
+    <nav id="navMenu">
+
+      <a href="#home">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+
+    </nav>
+
+    <a href="https://wa.me/919310771200" target="_blank" class="nav-btn">
+      Book Now
+    </a>
+
+    <div class="menu-btn" id="menuBtn">
+      ☰
+    </div>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+      <h1>Premium PG & Hostel</h1>
+
+      <p>
+        Safe, Comfortable and Affordable Living
+        for Students & Working Professionals.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#contact" class="primary-btn">
+          Book Visit
+        </a>
+
+        <a href="https://wa.me/919310771200"
+          target="_blank"
+          class="secondary-btn">
+
+          WhatsApp
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about">
+
+    <div class="about-image">
+
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop"
+        alt="PG Room">
+
+    </div>
+
+    <div class="about-content">
+
+      <h2>Why Choose NV PG?</h2>
+
+      <p>
+        Enjoy fully furnished rooms, high-speed WiFi,
+        hygienic food, daily cleaning and 24x7 security
+        at affordable prices.
+      </p>
+
+      <div class="features">
+
+        <div class="feature-box">
+          ✓ Free WiFi
         </div>
-    </section>
 
-    <!-- Featured Cities -->
-    <section class="cities" id="cities">
-        <div class="container">
-            <div class="section-header">
-                <h2>Popular Cities</h2>
-                <p>Find PGs near top colleges in your city</p>
-            </div>
-            <div class="cities-grid">
-                <div class="city-card" data-city="bangalore">
-                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=300&q=80" alt="Bangalore">
-                    <div class="city-info">
-                        <h3>Bangalore</h3>
-                        <p>2,500+ PGs</p>
-                    </div>
-                </div>
-                <div class="city-card" data-city="delhi">
-                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80" alt="Delhi">
-                    <div class="city-info">
-                        <h3>Delhi NCR</h3>
-                        <p>3,200+ PGs</p>
-                    </div>
-                </div>
-                <div class="city-card" data-city="mumbai">
-                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300&q=80" alt="Mumbai">
-                    <div class="city-info">
-                        <h3>Mumbai</h3>
-                        <p>1,800+ PGs</p>
-                    </div>
-                </div>
-                <div class="city-card" data-city="pune">
-                    <img src="https://images.unsplash.com/photo-1593399482407-cfe6f1f7bb7f?w=300&q=80" alt="Pune">
-                    <div class="city-info">
-                        <h3>Pune</h3>
-                        <p>1,500+ PGs</p>
-                    </div>
-                </div>
-                <div class="city-card" data-city="hyderabad">
-                    <img src="https://images.unsplash.com/photo-1618662545813-6d389a12919a?w=300&q=80" alt="Hyderabad">
-                    <div class="city-info">
-                        <h3>Hyderabad</h3>
-                        <p>1,200+ PGs</p>
-                    </div
+        <div class="feature-box">
+          ✓ AC Rooms
+        </div>
+
+        <div class="feature-box">
+          ✓ CCTV Security
+        </div>
+
+        <div class="feature-box">
+          ✓ Daily Cleaning
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ROOMS -->
+
+  <section class="rooms" id="rooms">
+
+    <h2>Our Rooms</h2>
+
+    <div class="room-container">
+
+      <div class="room-card">
+
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="room-content">
+
+          <h3>Single Room</h3>
+
+          <p>
+            Perfect for students who prefer privacy and comfort.
+          </p>
+
+          <h4>₹6,999 / Month</h4>
+
+        </div>
+
+      </div>
+
+      <div class="room-card">
+
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="room-content">
+
+          <h3>Double Sharing</h3>
+
+          <p>
+            Spacious room with modern facilities and AC.
+          </p>
+
+          <h4>₹4,999 / Month</h4>
+
+        </div>
+
+      </div>
+
+      <div class="room-card">
+
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="room-content">
+
+          <h3>Triple Sharing</h3>
+
+          <p>
+            Budget-friendly option with all premium amenities.
+          </p>
+
+          <h4>₹3,499 / Month</h4>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FACILITIES -->
+
+  <section class="facilities" id="facilities">
+
+    <h2>Facilities</h2>
+
+    <div class="facility-grid">
+
+      <div class="facility-box">24x7 Security</div>
+      <div class="facility-box">Laundry Service</div>
+      <div class="facility-box">Power Backup</div>
+      <div class="facility-box">High Speed WiFi</div>
+      <div class="facility-box">RO Water</div>
+      <div class="facility-box">Food Available</div>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+
+  <section class="gallery" id="gallery">
+
+    <h2>Gallery</h2>
+
+    <div class="gallery-grid">
+
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2>Book Your Room</h2>
+
+    <form>
+
+      <input type="text" placeholder="Your Name" required>
+
+      <input type="tel" placeholder="Phone Number" required>
+
+      <input type="email" placeholder="Email Address" required>
+
+      <textarea placeholder="Your Message"></textarea>
+
+      <button type="submit">
+        Submit Inquiry
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>NV PG & Hostel</h3>
+
+    <p>
+      Comfortable Living for Students & Professionals
+    </p>
+
+    <a href="https://wa.me/919310771200"
+      target="_blank">
+
+      WhatsApp Us
+
+    </a>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
