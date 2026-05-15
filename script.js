@@ -1,201 +1,170 @@
-// Mobile Navbar Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// ========================================
+// StayLux - Complete JavaScript
+// Professional PG/Hostel Website
+// ========================================
 
+// DOM Elements
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+const navbar = document.getElementById('navbar');
+
+// Mobile Menu Toggle
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
-
-// Navbar scroll effect
+// Navbar Scroll Effect
 window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+        navbar.style.background = 'rgba(255,255,255,0.98)';
+        navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
     } else {
-        navbar.classList.remove('scrolled');
+        navbar.style.background = 'rgba(255,255,255,0.95)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
     }
 });
 
-// AOS Animation Initialization
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100,
-});
-
-// Swiper Slider Initialization
-const swiper = new Swiper('.featured-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 1.5,
-        },
-        1024: {
-            slidesPerView: 2,
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
         }
-    }
+        // Close mobile menu
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
 });
 
-// Animated Counters
+// Counter Animation
 function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number');
+    const counters = document.querySelectorAll('.stat-number[data-target]');
     
     counters.forEach(counter => {
         const target = parseInt(counter.getAttribute('data-target'));
-        const increment = target / 100;
         let current = 0;
+        const speed = target / 100;
         
         const updateCounter = () => {
+            current += speed;
             if (current < target) {
-                current += increment;
-                counter.textContent = Math.floor(current) + '+';
-                setTimeout(updateCounter, 20);
+                counter.textContent = Math.floor(current).toLocaleString() + '+';
+                requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target + '+';
+                counter.textContent = target.toLocaleString() + '+';
             }
         };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    updateCounter();
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
-        
-        observer.observe(counter);
+        updateCounter();
     });
 }
 
-// Initialize counters when testimonials section is visible
-const testimonialsSection = document.querySelector('.testimonials');
-const observer = new IntersectionObserver((entries) => {
+// Intersection Observer for Counters
+const statsSection = document.querySelector('.stats');
+const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             animateCounters();
+            statsObserver.unobserve(entry.target);
         }
     });
-});
-observer.observe(testimonialsSection);
+}, { threshold: 0.5 });
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+if (statsSection) {
+    statsObserver.observe(statsSection);
+}
+
+// Form Handling
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.textContent = '✅ Thank You! Contacting Soon...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            contactForm.reset();
+        }, 3000);
     });
-});
+}
 
-// Search bar focus animation
-document.querySelectorAll('.search-group').forEach(group => {
-    const input = group.querySelector('input');
-    input.addEventListener('focus', () => {
-        group.classList.add('focused');
+// Search Button Animation
+const searchBtn = document.querySelector('.search-btn');
+if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+        searchBtn.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+            searchBtn.style.transform = 'scale(1)';
+        }, 150);
     });
-    input.addEventListener('blur', () => {
-        if (!input.value) {
-            group.classList.remove('focused');
-        }
-    });
-});
+}
 
-// Form submission
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Show success message
-    const btn = this.querySelector('.submit-btn');
-    const originalText = btn.textContent;
-    btn.textContent = 'Thank you! 🎉';
-    btn.style.background = 'linear-gradient(45deg, #10B981, #059669)';
-    
-    // Reset after 3 seconds
-    setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        this.reset();
-    }, 3000);
-});
-
-// Property card hover effects
-document.querySelectorAll('.property-card').forEach(card => {
+// Card Hover Effects
+document.querySelectorAll('.property-card, .amenity-card, .testimonial-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-12px) scale(1.02)';
+        card.style.transform = 'translateY(-8px) scale(1.02)';
     });
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0) scale(1)';
     });
 });
 
-// Floating animation for cards
-function addFloatingAnimation() {
-    const cards = document.querySelectorAll('.property-card, .amenity-card, .testimonial-card');
-    cards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-    });
-}
-
-// Initialize floating animation after page load
-window.addEventListener('load', () => {
-    addFloatingAnimation();
-});
-
-// Preloader (Optional - remove if not needed)
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 500);
-});
-
-// Intersection Observer for scroll-triggered animations
+// Scroll Animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
 };
 
 const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 150);
         }
     });
 }, observerOptions);
 
-// Observe all sections for scroll animations
+// Apply to all sections
 document.querySelectorAll('section').forEach(section => {
     section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'all 0.6s ease';
+    section.style.transform = 'translateY(40px)';
+    section.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
     scrollObserver.observe(section);
+});
+
+// Page Load Animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+
+// WhatsApp Pre-filled Message
+const whatsappLink = document.querySelector('.whatsapp-float');
+if (whatsappLink) {
+    whatsappLink.href = 'https://wa.me/919876543210?text=Hi%20StayLux%2C%20I%27m%20looking%20for%20PG%2FHostel%20near%20my%20college';
+}
+
+// Performance Optimization
+if ('IntersectionObserver' in window) {
+    console.log('✅ All animations optimized with IntersectionObserver');
+} else {
+    console.log('⚠️ IntersectionObserver not supported - using basic animations');
+}
+
+// Final initialization
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 StayLux Website Fully Loaded!');
+    document.body.style.opacity = '1';
 });
