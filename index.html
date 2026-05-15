@@ -3,261 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StayLux - Premium PG & Hostel Finder</title>
-    <meta name="description" content="Premium PGs & Hostels for students. Luxury amenities, safe locations near colleges. Book now!">
+    <title>PGDekho - Find Best PG & Hostel Near You</title>
+    <meta name="description" content="Book verified PG, Hostel & Paying Guest accommodation near colleges. Safe, affordable & luxury options.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Stay<span>Lux</span></h2>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="#" class="logo">
+                        <img src="https://via.placeholder.com/120x40/FF6B35/FFFFFF?text=PGDekho" alt="PGDekho">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#properties" class="nav-link">PGs</a></li>
+                    <li><a href="#amenities" class="nav-link">Amenities</a></li>
+                    <li><a href="#cities" class="nav-link">Cities</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="book-btn">Book Now</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#properties" class="nav-link">Properties</a></li>
-                <li><a href="#amenities" class="nav-link">Amenities</a></li>
-                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Find Your Perfect <span>Student Stay</span></h1>
-                <p class="hero-subtitle">Premium PGs & Hostels with Luxury Amenities. Safe, Modern & Affordable Living for Students.</p>
+                <h1>Find Verified PG & Hostel <span>Near Your College</span></h1>
+                <p>10,000+ verified properties | Safe & secure | Starting ₹5,000/month</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>25+</strong>
+                        <span>Cities</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>10K+</strong>
+                        <span>Properties</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>50K+</strong>
+                        <span>Happy Students</span>
+                    </div>
+                </div>
             </div>
-            <div class="search-container">
-                <div class="search-bar">
+            <div class="hero-search">
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-tab="pg">PG</button>
+                    <button class="tab-btn" data-tab="hostel">Hostel</button>
+                    <button class="tab-btn" data-tab="flat">Flats</button>
+                </div>
+                <form class="search-form">
                     <div class="search-group">
                         <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" placeholder="Location (City/Area)">
+                        <input type="text" placeholder="Enter City/Area (ex: Koramangala, Delhi)" required>
                     </div>
                     <div class="search-group">
-                        <i class="fas fa-calendar-days"></i>
-                        <input type="date">
+                        <i class="fas fa-bed"></i>
+                        <select>
+                            <option>1 BHK</option>
+                            <option>2 BHK</option>
+                            <option>3 BHK</option>
+                            <option>Single Room</option>
+                        </select>
                     </div>
                     <div class="search-group">
-                        <i class="fas fa-users"></i>
-                        <input type="number" placeholder="Guests" min="1">
+                        <i class="fas fa-rupee-sign"></i>
+                        <select>
+                            <option>₹5,000 - ₹10,000</option>
+                            <option>₹10,000 - ₹15,000</option>
+                            <option>₹15,000+</option>
+                        </select>
                     </div>
-                    <button class="search-btn">
-                        <i class="fas fa-search"></i> Search
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i> Search PGs
                     </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Properties -->
-    <section id="properties" class="properties">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Premium Properties</h2>
-                <p class="section-subtitle">Handpicked luxury PGs & Hostels for students</p>
-            </div>
-            <div class="properties-grid">
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&q=80" alt="Luxury PG">
-                        <div class="property-badge">Featured</div>
-                    </div>
-                    <div class="property-content">
-                        <h3>Luxury Student PG</h3>
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i> Koramangala, Bangalore
-                        </div>
-                        <div class="property-price">₹12,000 <span>/month</span></div>
-                        <ul class="property-amenities">
-                            <li><i class="fas fa-bed"></i> 2BHK</li>
-                            <li><i class="fas fa-snowflake"></i> AC</li>
-                            <li><i class="fas fa-wifi"></i> WiFi</li>
-                        </ul>
-                        <button class="view-btn">View Details</button>
-                    </div>
-                </div>
-
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&q=80" alt="Modern Hostel">
-                    </div>
-                    <div class="property-content">
-                        <h3>Modern Hostel Hub</h3>
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i> Indiranagar, Bangalore
-                        </div>
-                        <div class="property-price">₹9,500 <span>/month</span></div>
-                        <ul class="property-amenities">
-                            <li><i class="fas fa-bed"></i> Single Room</li>
-                            <li><i class="fas fa-utensils"></i> Meals</li>
-                            <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
-                        </ul>
-                        <button class="view-btn">View Details</button>
-                    </div>
-                </div>
-
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41e76816?w=500&q=80" alt="Premium PG">
-                    </div>
-                    <div class="property-content">
-                        <h3>Premium Co-Living</h3>
-                        <div class="property-location">
-                            <i class="fas fa-map-marker-alt"></i> Whitefield, Bangalore
-                        </div>
-                        <div class="property-price">₹15,000 <span>/month</span></div>
-                        <ul class="property-amenities">
-                            <li><i class="fas fa-bed"></i> 3BHK</li>
-                            <li><i class="fas fa-dumbbell"></i> Gym</li>
-                            <li><i class="fas fa-swimming-pool"></i> Pool</li>
-                        </ul>
-                        <button class="view-btn">View Details</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Amenities -->
-    <section id="amenities" class="amenities">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">World-Class Amenities</h2>
-                <p class="section-subtitle">Everything for comfortable student living</p>
-            </div>
-            <div class="amenities-grid">
-                <div class="amenity-card">
-                    <div class="amenity-icon"><i class="fas fa-wifi"></i></div>
-                    <h3>High-Speed WiFi</h3>
-                    <p>Unlimited internet</p>
-                </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon"><i class="fas fa-utensils"></i></div>
-                    <h3>Healthy Meals</h3>
-                    <p>3 meals daily</p>
-                </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon"><i class="fas fa-snowflake"></i></div>
-                    <h3>AC Rooms</h3>
-                    <p>24/7 cooling</p>
-                </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon"><i class="fas fa-video"></i></div>
-                    <h3>24/7 CCTV</h3>
-                    <p>Complete security</p>
-                </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon"><i class="fas fa-tshirt"></i></div>
-                    <h3>Laundry</h3>
-                    <p>Weekly service</p>
-                </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon"><i class="fas fa-car"></i></div>
-                    <h3>Parking</h3>
-                    <p>Secure parking</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Happy Students</h2>
-                <p class="section-subtitle">Trusted by thousands</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"Best PG ever! Clean, safe & perfect location."</p>
-                    <div class="author">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&q=80" alt="Priya">
-                        <div>Priya S. <span>IIIT Bangalore</span></div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p>"Amazing WiFi & food. Highly recommend!"</p>
-                    <div class="author">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&q=80" alt="Rahul">
-                        <div>Rahul K. <span>IIM Bangalore</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number" data-target="10000">0</div>
-                    <span>Happy Students</span>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" data-target="500">0</div>
-                    <span>Properties</span>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" data-target="25">0</div>
-                    <span>Cities</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Ready to Book?</h2>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>+91 98765 43210</div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Name" required>
-                    <input type="tel" placeholder="Phone" required>
-                    <textarea placeholder="Requirements..." rows="4"></textarea>
-                    <button type="submit">Send Inquiry</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Featured Cities -->
+    <section class="cities" id="cities">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Stay<span>Lux</span></h3>
-                    <p>Premium student accommodation</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://wa.me/919876543210"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+            <div class="section-header">
+                <h2>Popular Cities</h2>
+                <p>Find PGs near top colleges in your city</p>
             </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
-</body>
-</html>
+            <div class="cities-grid">
+                <div class="city-card" data-city="bangalore">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=300&q=80" alt="Bangalore">
+                    <div class="city-info">
+                        <h3>Bangalore</h3>
+                        <p>2,500+ PGs</p>
+                    </div>
+                </div>
+                <div class="city-card" data-city="delhi">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80" alt="Delhi">
+                    <div class="city-info">
+                        <h3>Delhi NCR</h3>
+                        <p>3,200+ PGs</p>
+                    </div>
+                </div>
+                <div class="city-card" data-city="mumbai">
+                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300&q=80" alt="Mumbai">
+                    <div class="city-info">
+                        <h3>Mumbai</h3>
+                        <p>1,800+ PGs</p>
+                    </div>
+                </div>
+                <div class="city-card" data-city="pune">
+                    <img src="https://images.unsplash.com/photo-1593399482407-cfe6f1f7bb7f?w=300&q=80" alt="Pune">
+                    <div class="city-info">
+                        <h3>Pune</h3>
+                        <p>1,500+ PGs</p>
+                    </div>
+                </div>
+                <div class="city-card" data-city="hyderabad">
+                    <img src="https://images.unsplash.com/photo-1618662545813-6d389a12919a?w=300&q=80" alt="Hyderabad">
+                    <div class="city-info">
+                        <h3>Hyderabad</h3>
+                        <p>1,200+ PGs</p>
+                    </div
