@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayLux - Premium PG & Hostel Finder</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Stay<span>Lux</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#properties" class="nav-link">Properties</a></li>
+                <li><a href="#amenities" class="nav-link">Amenities</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="hero-title">Find Your Perfect <span>Student Stay</span></h1>
+                <p class="hero-subtitle">Premium PGs & Hostels with Luxury Amenities. Safe, Modern & Affordable Living for Students.</p>
+            </div>
+            
+            <div class="search-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="search-bar">
+                    <div class="search-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Location (City/Area)">
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="search-group">
+                        <i class="fas fa-calendar-days"></i>
+                        <input type="text" placeholder="Check-in Date" onfocus="(this.type='date')">
+                    </div>
+                    <div class="search-group">
+                        <i class="fas fa-users"></i>
+                        <input type="text" placeholder="Guests">
+                    </div>
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section id="properties" class="properties">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Premium Properties</h2>
+                <p class="section-subtitle">Handpicked luxury PGs & Hostels for modern students</p>
+            </div>
+            
+            <div class="properties-grid">
+                <!-- Property 1 -->
+                <div class="property-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Luxury PG">
+                        <div class="property-badge">Featured</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3>Luxury Student PG</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (127)</span>
+                            </div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Koramangala, Bangalore</span>
+                        </div>
+                        <ul class="property-amenities">
+                            <li><i class="fas fa-bed"></i> 2BHK</li>
+                            <li><i class="fas fa-user-friends"></i> 2 Sharing</li>
+                            <li><i class="fas fa-snowflake"></i> AC</li>
+                        </ul>
+                        <div class="property-price">
+                            <span class="price">₹12,000</span>
+                            <span class="per">/month</span>
+                        </div>
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div class="property-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern Hostel">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3>Modern Hostel Hub</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (89)</span>
+                            </div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Indiranagar, Bangalore</span>
+                        </div>
+                        <ul class="property-amenities">
+                            <li><i class="fas fa-bed"></i> Single Room</li>
+                            <li><i class="fas fa-utensils"></i> Meals</li>
+                            <li><i class="fas fa-wifi"></i> High-Speed WiFi</li>
+                        </ul>
+                        <div class="property-price">
+                            <span class="price">₹9,500</span>
+                            <span class="per">/month</span>
+                        </div>
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="property-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41e76816?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Premium PG">
+                    </div>
+                    <div class="property-content">
+                        <div class="property-header">
+                            <h3>Premium Co-Living</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (156)</span>
+                            </div>
+                        </div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Whitefield, Bangalore</span>
+                        </div>
+                        <ul class="property-amenities">
+                            <li><i class="fas fa-bed"></i> 3BHK</li>
+                            <li><i class="fas fa-dumbbell"></i> Gym</li>
+                            <li><i class="fas fa-swimming-pool"></i> Pool</li>
+                        </ul>
+                        <div class="property-price">
+                            <span class="price">₹15,000</span>
+                            <span class="per">/month</span>
+                        </div>
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">World-Class Amenities</h2>
+                <p class="section-subtitle">Everything you need for comfortable student living</p>
+            </div>
+            
+            <div class="amenities-grid">
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="amenity-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>High-Speed WiFi</h3>
+                    <p>Unlimited internet for studies & streaming</p>
+                </div>
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="amenity-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Healthy Meals</h3>
+                    <p>3 meals daily + weekend specials</p>
+                </div>
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="amenity-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>AC Rooms</h3>
+                    <p>24/7 air-conditioned comfort</p>
+                </div>
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="amenity-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>24/7 CCTV</h3>
+                    <p>Safety & security guaranteed</p>
+                </div>
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="amenity-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Laundry Service</h3>
+                    <p>Weekly laundry pickup & delivery</p>
+                </div>
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="amenity-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Parking Space</h3>
+                    <p>Secure parking for bikes & cars</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Slider -->
+    <section class="featured-slider">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Properties</h2>
+                <p class="section-subtitle">Most popular choices among students</p>
+            </div>
+            
+            <div class="swiper featured-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Featured Property">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Featured Property">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1578683015141-39940e965294?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Featured Property">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">What Students Say</h2>
+                <p class="section-subtitle">Trusted by 10,000+ students across India</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <p>"Best PG experience ever! Clean rooms, great food, and super safe. Perfect for students."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Priya S." class="author-avatar">
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <span>IIIT Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <p>"High-speed WiFi and AC rooms made my semester so much better. Highly recommend!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Rahul K." class="author-avatar">
+                        <div>
+                            <h4>Rahul Kumar</h4>
+                            <span>IIM Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10000">0</div>
+                    <div class="stat-label">Happy Students</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Properties</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Cities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="contact" class="map-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Find Us Near You</h2>
+                <p class="section-subtitle">Strategic locations near top colleges</p>
+            </div>
+            <div class="map-container" data-aos="fade-up" data-aos-delay="200">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.812!2d77.597!3d12.926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14!2zS29yYW1hbmdhbGEgQmFuZ2Fsb3Jl!5e0!3m2!1sen!2sin!4v1699999999999" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-container" data-aos="fade-up">
+                <div class="contact-info">
+                    <h2>Ready to Book?</h2>
+                    <p>Get personalized property recommendations</p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <span>+91 98765 43210</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <span>hello@staylux.com</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell us your requirements..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Stay<span>Lux</span></h3>
+                    <p>Premium PG & Hostel accommodations for modern students</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">PG Booking</a></li>
+                        <li><a href="#">Hostel Finder</a></li>
+                        <li><a href="#">Student Housing</a></li>
+                        <li><a href="#">Relocation Help</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StayLux. All rights reserved. | Made with ❤️ for students</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
