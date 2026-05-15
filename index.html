@@ -1,259 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StayNest - Premium PG & Hostel Finder</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>NV PG & Hostel</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- FONT -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">StayNest</div>
 
-  <header>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Properties</a></li>
+      <li><a href="#">Amenities</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
 
-    <div class="logo">
-      NV PG
-    </div>
-
-    <nav id="navMenu">
-
-      <a href="#home">Home</a>
-
-      <a href="#about">About</a>
-
-      <a href="#rooms">Rooms</a>
-
-      <a href="#facilities">Facilities</a>
-
-      <a href="#gallery">Gallery</a>
-
-      <a href="#contact">Contact</a>
-
-    </nav>
-
-    <a href="#contact" class="book-btn">
-      Book Now
-    </a>
-
-    <div class="menu-btn" id="menuBtn">
-      ☰
-    </div>
-
-  </header>
+    <a href="#" class="nav-btn">Book Now</a>
+  </nav>
 
   <!-- HERO -->
+  <section class="hero">
 
-  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
 
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-
-      <h1>Luxury PG & Hostel</h1>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Find Your Premium <span>PG & Hostel</span></h1>
 
       <p>
-        Premium Living For Students & Working Professionals
+        Luxury student stays with modern comfort, security, and premium lifestyle.
       </p>
 
+      <div class="search-box">
+        <input type="text" placeholder="Search city or location">
+        <button>Search</button>
+      </div>
+
       <div class="hero-buttons">
+        <a href="#" class="primary-btn">Explore Rooms</a>
+        <a href="#" class="secondary-btn">Watch Tour</a>
+      </div>
+    </div>
 
-        <a href="#contact" class="primary-btn">
-          Book Visit
-        </a>
+  </section>
 
-        <a href="https://wa.me/919310771200"
-          target="_blank"
-          class="secondary-btn">
+  <!-- COUNTERS -->
+  <section class="counter-section">
 
-          WhatsApp
+    <div class="counter-card">
+      <h2 class="counter" data-target="1200">0</h2>
+      <p>Happy Students</p>
+    </div>
 
-        </a>
+    <div class="counter-card">
+      <h2 class="counter" data-target="250">0</h2>
+      <p>Premium Properties</p>
+    </div>
 
+    <div class="counter-card">
+      <h2 class="counter" data-target="24">0</h2>
+      <p>Support Available</p>
+    </div>
+
+  </section>
+
+  <!-- ROOM CARDS -->
+  <section class="rooms">
+
+    <div class="section-title" data-aos="fade-up">
+      <h2>Premium Rooms</h2>
+      <p>Luxury spaces crafted for students</p>
+    </div>
+
+    <div class="room-grid">
+
+      <div class="room-card glass" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Room">
+
+        <div class="room-content">
+          <h3>Luxury Single Room</h3>
+
+          <div class="price">₹9,500/month</div>
+
+          <div class="amenities-mini">
+            <span>WiFi</span>
+            <span>AC</span>
+            <span>Food</span>
+          </div>
+
+          <button>View Details</button>
+        </div>
+      </div>
+
+      <div class="room-card glass" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" alt="Room">
+
+        <div class="room-content">
+          <h3>Modern Twin Sharing</h3>
+
+          <div class="price">₹7,000/month</div>
+
+          <div class="amenities-mini">
+            <span>Laundry</span>
+            <span>Parking</span>
+            <span>CCTV</span>
+          </div>
+
+          <button>View Details</button>
+        </div>
+      </div>
+
+      <div class="room-card glass" data-aos="zoom-in">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Room">
+
+        <div class="room-content">
+          <h3>Executive Hostel Room</h3>
+
+          <div class="price">₹11,000/month</div>
+
+          <div class="amenities-mini">
+            <span>WiFi</span>
+            <span>Food</span>
+            <span>AC</span>
+          </div>
+
+          <button>View Details</button>
+        </div>
       </div>
 
     </div>
 
   </section>
 
-  <!-- ABOUT -->
+  <!-- AMENITIES -->
+  <section class="amenities">
 
-  <section class="about" id="about">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Luxury Amenities</h2>
+    </div>
 
-    <h2>Why Choose NV PG?</h2>
+    <div class="amenity-grid">
 
-    <p>
-      Fully furnished premium rooms with modern facilities,
-      high-speed WiFi, hygienic food and 24x7 security.
-    </p>
-
-  </section>
-
-  <!-- ROOMS -->
-
-  <section class="rooms" id="rooms">
-
-    <h2>Our Rooms</h2>
-
-    <div class="room-container">
-
-      <div class="room-card">
-
-        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="room-content">
-
-          <h3>Single Room</h3>
-
-          <p>
-            Private luxury room with modern interior.
-          </p>
-
-          <h4>₹6,999 / Month</h4>
-
-        </div>
-
+      <div class="amenity-card glass">
+        <i class="fa-solid fa-wifi"></i>
+        <h3>High Speed WiFi</h3>
       </div>
 
-      <div class="room-card">
-
-        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
-
-        <div class="room-content">
-
-          <h3>Double Sharing</h3>
-
-          <p>
-            Comfortable shared room with premium facilities.
-          </p>
-
-          <h4>₹4,999 / Month</h4>
-
-        </div>
-
+      <div class="amenity-card glass">
+        <i class="fa-solid fa-utensils"></i>
+        <h3>Healthy Food</h3>
       </div>
 
-      <div class="room-card">
+      <div class="amenity-card glass">
+        <i class="fa-solid fa-shirt"></i>
+        <h3>Laundry</h3>
+      </div>
 
-        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+      <div class="amenity-card glass">
+        <i class="fa-solid fa-snowflake"></i>
+        <h3>Air Conditioning</h3>
+      </div>
 
-        <div class="room-content">
+      <div class="amenity-card glass">
+        <i class="fa-solid fa-camera"></i>
+        <h3>24x7 CCTV</h3>
+      </div>
 
-          <h3>Triple Sharing</h3>
-
-          <p>
-            Budget-friendly room with all modern amenities.
-          </p>
-
-          <h4>₹3,499 / Month</h4>
-
-        </div>
-
+      <div class="amenity-card glass">
+        <i class="fa-solid fa-car"></i>
+        <h3>Parking</h3>
       </div>
 
     </div>
 
   </section>
 
-  <!-- FACILITIES -->
+  <!-- SWIPER -->
+  <section class="featured">
 
-  <section class="facilities" id="facilities">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Featured Properties</h2>
+    </div>
 
-    <h2>Facilities</h2>
+    <div class="swiper mySwiper">
 
-    <div class="facility-grid">
+      <div class="swiper-wrapper">
 
-      <div class="facility-box">24x7 Security</div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
 
-      <div class="facility-box">High Speed WiFi</div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
 
-      <div class="facility-box">Power Backup</div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop" alt="">
+        </div>
 
-      <div class="facility-box">Laundry Service</div>
+      </div>
 
-      <div class="facility-box">RO Water</div>
-
-      <div class="facility-box">Food Available</div>
+      <div class="swiper-pagination"></div>
 
     </div>
 
   </section>
 
-  <!-- GALLERY -->
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
 
-  <section class="gallery" id="gallery">
+    <div class="section-title">
+      <h2>Student Reviews</h2>
+    </div>
 
-    <h2>Gallery</h2>
+    <div class="testimonial-grid">
 
-    <div class="gallery-grid">
+      <div class="testimonial-card glass">
+        <p>
+          “Amazing experience, premium rooms and super safe environment.”
+        </p>
 
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+        <h4>- Rahul Sharma</h4>
+      </div>
 
-      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+      <div class="testimonial-card glass">
+        <p>
+          “Feels like luxury living. Food and facilities are excellent.”
+        </p>
 
-      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+        <h4>- Priya Verma</h4>
+      </div>
 
-      <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop">
+      <div class="testimonial-card glass">
+        <p>
+          “Best PG booking experience with modern amenities.”
+        </p>
 
+        <h4>- Aman Singh</h4>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+
+    <div class="section-title">
+      <h2>Find Us On Map</h2>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.89796907324!2d77.04417374754634!3d28.527554410860894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d194f0c8c3f59%3A0x3c0b6d1b0f4f2e4!2sDelhi!5e0!3m2!1sen!2sin!4v1710000000000"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
     </div>
 
   </section>
 
   <!-- CONTACT -->
+  <section class="contact">
 
-  <section class="contact" id="contact">
+    <div class="section-title">
+      <h2>Book Your Stay</h2>
+    </div>
 
-    <h2>Book Your Room</h2>
+    <form class="contact-form glass">
 
-    <form>
-
-      <input type="text" placeholder="Your Name" required>
-
-      <input type="email" placeholder="Email Address" required>
-
-      <input type="tel" placeholder="Phone Number" required>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Email Address">
+      <input type="text" placeholder="Preferred Location">
 
       <textarea placeholder="Your Message"></textarea>
 
-      <button type="submit">
-        Submit Inquiry
-      </button>
+      <button type="submit">Send Inquiry</button>
 
     </form>
 
   </section>
 
   <!-- FOOTER -->
-
   <footer>
 
-    <h3>NV PG & Hostel</h3>
+    <h2>StayNest</h2>
 
-    <p>
-      Safe • Comfortable • Affordable
+    <p>Luxury PG & Hostel Finder for Students</p>
+
+    <div class="socials">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+
+    <p class="copyright">
+      © 2026 StayNest. All Rights Reserved.
     </p>
 
   </footer>
 
-  <!-- JS -->
+  <!-- WHATSAPP -->
+  <a href="#" class="whatsapp-btn">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <script src="script.js"></script>
 
 </body>
-
 </html>
